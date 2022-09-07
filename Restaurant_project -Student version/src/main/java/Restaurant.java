@@ -69,8 +69,15 @@ public class Restaurant {
         return name;
     }
 
-    public int calculateOrderValue(List<String> itemName) {
+    //Functional is created to calculate the Order Value. It is following TDD approach.
+    public int calculateOrderValue(List<String> searchByItemName) {
         int orderValue=0;
+        Item searchItem;
+
+        for(String itemName:searchByItemName) {
+            searchItem = findItemByName(itemName);
+            orderValue = orderValue + searchItem.getPrice();
+        }
         return orderValue;
 
     }
