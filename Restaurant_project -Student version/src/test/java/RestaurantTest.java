@@ -70,11 +70,10 @@ class RestaurantTest {
 
     //Test to calculate order value with TDD approach
     @Test
-    public void selected_order_value_should_be_equal_to_388(){
+    public void selected_items_order_value_should_be_equal_to_388(){
         List<String> selectedItem=new ArrayList<String>();
         selectedItem.add("Sweet corn soup");
         selectedItem.add("Vegetable lasagne");
-
         int orderValue=restaurant.calculateOrderValue(selectedItem);
 
         assertEquals(388,orderValue);
