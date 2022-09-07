@@ -74,7 +74,6 @@ class RestaurantTest {
         List<String> selectedItem=new ArrayList<String>();
         selectedItem.add("Sweet corn soup");
         selectedItem.add("Vegetable lasagne");
-
         int orderValue=restaurant.calculateOrderValue(selectedItem);
 
         assertEquals(388,orderValue);
